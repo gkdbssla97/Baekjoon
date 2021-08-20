@@ -21,3 +21,6 @@ int main(void) {
     }
     return 0;
 }
+/*In the range from j = 2 to the square root of j,
+when j is modulated by i, if it is not 0, it is a prime number.
+Efficient in saving memory.*/
