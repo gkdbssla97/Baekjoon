@@ -8,16 +8,23 @@ def prime_num(x) :
             return False
     return True
 
+all_list = list(range(2,246912))
+memo = []
 
+for i in all_list:
+    if prime_num(i) :
+        memo.append(i)
+
+num = int(input())
 
 while 1 :
-    num = int(input())
     cnt = 0
     if num == 0 :
         break
 
-    for i in range(num + 1, (num * 2) + 1) :
-        if(prime_num(i)) :
+    for i in memo :
+        if(num < i <= num * 2) :
             cnt += 1
     
     print(cnt)
+    num = int(input())
